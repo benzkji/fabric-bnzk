@@ -32,12 +32,12 @@ def create_custom_python(force=False):
                 return
             else:
                 run('rm -rf python{custom_python3}'.format(**env))
-            run('wget https://www.python.org/ftp/python/{custom_python3}/Python-{custom_python3}.tar.xz'.format(**env))
-            run('tar -xJf Python-{custom_python3}.tar.xz'.format(**env))
-            run('rm Python-{custom_python3}.tar.xz'.format(**env))
-            with cd('Python-{custom_python3}'.format(**env)):
-                run('./configure --prefix $HOME/python{custom_python3} && make && make install'.format(**env))
-            run('rm -rf Python-{custom_python3}'.format(**env))
+        run('wget https://www.python.org/ftp/python/{custom_python3}/Python-{custom_python3}.tar.xz'.format(**env))
+        run('tar -xJf Python-{custom_python3}.tar.xz'.format(**env))
+        run('rm Python-{custom_python3}.tar.xz'.format(**env))
+        with cd('Python-{custom_python3}'.format(**env)):
+            run('./configure --prefix $HOME/python{custom_python3} && make && make install'.format(**env))
+        run('rm -rf Python-{custom_python3}'.format(**env))
 
 
 @task

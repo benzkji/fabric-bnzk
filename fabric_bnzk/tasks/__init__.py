@@ -3,7 +3,7 @@ import sys
 from fabric.api import env
 
 from fabric_bnzk.tasks.bootstrap import (
-    bootstrap, create_virtualenv, clone_repos
+    bootstrap, create_virtualenv, clone_repos, create_custom_python
 )
 from fabric_bnzk.tasks.local import (
     pip_init_upgrade, pip_compile
@@ -44,6 +44,7 @@ __all__ = [
     'pip_init_upgrade',
     'pip_compile',
     'create_virtualenv',
+    'create_custom_python',
     'create_nginx_folders',
     'create_supervisor_folders',
     'clone_repos',

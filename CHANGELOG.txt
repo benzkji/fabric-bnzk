@@ -1,5 +1,9 @@
 === (ongoing) ===
 
+=== 0.1.2 (2024-09-26) ==
+
+- fix in create_custom_python, add it to default available tasks
+
 
 === 0.1.1 (2022-02-08) ==
 
