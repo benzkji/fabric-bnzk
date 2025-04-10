@@ -30,7 +30,9 @@ from fabric_bnzk.tasks.supervisor import (
 from fabric_bnzk.tasks.uwsgi import (
     copy_restart_uwsgi
 )
-
+from fabric_bnzk.tasks.glitchtip import (
+    setup_glitchtip, setup_all_glitchtip_alerts
+)
 
 # hm. https://github.com/fabric/fabric/issues/256
 sys.path.insert(0, sys.path[0])
@@ -73,6 +75,8 @@ __all__ = [
     'supervisorctl',
     'copy_restart_supervisord',
     'copy_restart_uwsgi',
+    'setup_glitchtip',
+    'setup_all_glitchtip_alerts',
 
     # 'get_db_mysql',
     # 'put_db_mysql',
